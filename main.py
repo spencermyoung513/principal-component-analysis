@@ -1,8 +1,3 @@
-# We want to be able to reduce the dimensionality of data in order to make accurate predictions based on a dataset
-# Principal component analysis will accomplish this goal
-# To project onto two dimensional space, we want to choose a plane that maximizes the variance in projected data (allows us to distinguish different points)
-# This plane is a subspace spanned by the eigenvectors of the data's covariance matrix. Variance of the data is the sum of the eigenvalues
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -82,6 +77,7 @@ basisEigVectors = optimalBasis(C,0.999)
 # U is the transformation matrix which will shrink our data to the proper number of dimensions
 U = np.array(basisEigVectors)
 
+# Check to see if projection is 2D before plotting
 if U.shape[0] == 2:
 
 	negativeResponses2D = U @ negativeResponses
