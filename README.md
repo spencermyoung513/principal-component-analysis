@@ -2,7 +2,7 @@
 Analyzing multidimensional cancer survey data to predict which of two respondents is at a higher risk (using principal component analysis)
 
 ### Notes:
-- Data for this project was pulled from a school assignment. As such, it has been carefully-selected so as to be centered around the origin, which makes construction of a covariance matrix possible.
+- Data for this project was pulled from a school assignment. As such, it has been carefully selected so as to be centered around the origin, which makes construction of a covariance matrix possible.
 
 ### Overview:
 
@@ -14,7 +14,7 @@ Accordingly, we have a 100-dimensional dataset that we hope to draw conclusions 
 
 ### Goals:
 
-1. Reduce the dimensionality of our dataset while maximally preserving its variance.
+1. Reduce the dimensionality of our dataset while maximally preserving its variance (average of squared distances from the mean, helps to distinguish data points).
 
 2. Plot our data in two dimensions so that we may visually identify clusters, then use these patterns to conclude if two patients with unknown status are likely to develop cancer.
 
@@ -41,7 +41,7 @@ patientOneResponses = surveyData.loc[surveyData[100]<0].drop(columns=100).values
 patientTwoResponses = surveyData.loc[surveyData[100]<0].drop(columns=100).values[1,:]
 ```
 
-A covariance matrix `C` can be constructed using the following formula, where `X` is the matrix of data:
+A covariance matrix `C` can be constructed using the following formula, where `X` is the matrix of data and `n` is the number of data points:
 
 ![Covariance Formula](https://github.com/spencermyoung513/Principal-Component-Analysis/blob/main/Equation%20Images/Equation1.PNG)
 
