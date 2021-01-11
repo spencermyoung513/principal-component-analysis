@@ -3,6 +3,7 @@ Analyzing multidimensional cancer survey data to predict which of two respondent
 
 ### Notes:
 - Data for this project was pulled from a school assignment. As such, it has been carefully selected so as to be centered around the origin, which makes construction of a covariance matrix possible.
+- I skimmed over a lot of the finer mathematical details, specifically in why this entire process *works* in the first place. For more reading on the subject, [this article](https://builtin.com/data-science/step-step-explanation-principal-component-analysis) may prove useful.
 
 ### Overview:
 
